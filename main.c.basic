@@ -1,0 +1,23 @@
+/*
+* Hackaday.com AVR Tutorial firmware
+* written by: Mike Szczys (@szczys)
+* 10/24/2010
+*
+* ATmega168
+* Blinks one LED conneced to PD0
+*
+* http://hackaday.com/2010/10/25/avr-programming-02-the-hardware/
+*/
+
+#include <avr/io.h>
+#include <avr/interrupt.h>
+
+int main(void)
+{
+  //Setup the I/O for the LED
+
+  DDRD = 0xff;			//Set PortD as output
+  PORTD |= (1<<PD2);		//Set PortD Pin2 high to turn on LED
+
+  while(1) { }			//Loop forever, interrupts do the rest
+}
