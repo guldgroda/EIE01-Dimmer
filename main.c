@@ -48,9 +48,9 @@ int enc = 0;
 ISR(PCINT0_vect){
   uint8_t rot=isCWRotation();
   if(rot==1){
-    enc++;
+    enc+=5;
   } else if(rot==0) {
-    enc--;
+    enc-=5;
   }
   
   //Check for overflow
