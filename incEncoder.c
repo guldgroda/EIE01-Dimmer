@@ -2,7 +2,7 @@
 #include <avr/interrupt.h>
 
 //Personal headers
-#include <incEncoder.h>
+#include "incEncoder.h"
 
 volatile uint8_t PBhistory = 0xFF; //Default is high because of the pull ups
 
